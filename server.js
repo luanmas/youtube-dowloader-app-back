@@ -19,7 +19,6 @@ app.post("/download", (req, res) => {
   } else if (format === "mp4") {
     outputFile = "video.mp4";
     cmd = `yt-dlp -f "bv*+ba" -o "video" "${url}"`;
-    //yt-dlp -f "bv*+ba" -o "video.mp4" https://www.youtube.com/watch?v=A1LvxVqxdLw
   } else {
     return res.status(400).send("Formato inválido.");
   }
